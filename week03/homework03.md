@@ -17,7 +17,15 @@
 2. 使用 sqlalchemy ORM 方式创建如下表，使用 PyMySQL 对该表写入 3 条测试数据，并读取:
 
 - 用户 id、用户名、年龄、生日、性别、学历、字段创建时间、字段更新时间
+
 - 将 ORM、插入、查询语句作为作业内容提交
+
+  ``` 
+  create_sqlalchemy_orm.py
+  insert_pymysql.py
+  ```
+
+  
 
 3. 为以下 sql 语句标注执行顺序：
 
@@ -110,3 +118,8 @@ ON Table1.id = Table2.id;
 
 - 请合理设计三张表的字段类型和表结构；
 - 请实现转账 100 极客币的 SQL(可以使用 pymysql 或 sqlalchemy-orm 实现)，张三余额不足，转账过程中数据库 crash 等情况需保证数据一致性。
+
+~~~
+geek_deal.py
+~~~
+
