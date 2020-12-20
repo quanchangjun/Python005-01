@@ -1,0 +1,27 @@
+数据表的读写
+PS C:\Users\quanchangjun\MyDjango> python manage.py shell
+Python 3.8.5 (tags/v3.8.5:580fbb0, Jul 20 2020, 15:57:54) [MSC v.1924 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> dir()
+['__builtins__']
+>>> from index.models import *
+>>> dir()
+['Name', 'Type', '__builtins__', 'models']
+>>> n=Name()
+>>> type(n)
+<class 'index.models.Name'>
+>>> n.name='红楼梦'
+>>> n.author='曹雪芹'
+>>> n.stars=9.6
+>>> n.save()
+>>> from index.models import *
+>>> Name.objects.create(name='活着',author='余华',stars='9.4')
+<Name: Name object (2)>
+>>> Name.objects.get(id=2).name
+'活着'
+>>> Name.objects.filter(name='红楼梦').update(name='石头记')
+1
+>>> Name.objects.get(id=1).name  
+'石头记'
+>>>exit()
