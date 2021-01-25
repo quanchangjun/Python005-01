@@ -59,6 +59,19 @@
    http -a admin:admin DELETE http://17.0.1:8000/api/v2/articles/3/
    
    
+   pip3 install django-filter
+   pip3 install notifications
+   python manage.py migrate notifications
+   
+   pip install django-notifications-hq
+   pip install djangorestframework-jwt
+   pip install coreapi pyyaml
+   
+   python manage.py makemigrations
+   python manage.py migrate
+   
+   
+   
    
    ~~~
 
