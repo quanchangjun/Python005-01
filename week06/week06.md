@@ -41,7 +41,7 @@
    #__getattr__
    #对于不存在的属性，执行顺序：__getattribute__ --> __getattr__ --> __dict__
    
-   
+   property属性描述符，本质是特殊类
    #property
    #property可以直接当函数使用，也可以作装饰器使用（将方法封装成属性）
    #@property
@@ -49,7 +49,7 @@
    #gender = property(get_,set_,del_,'other property')
    #property本质并不是函数，而是特殊类（实现了数据描述符的类）
    #如果一个对象同时定义了__get__()和__set__()方法，则称为数据描述符
-   #如果仅定义了__gte__()方法，则称为非数据描述符
+   #如果仅定义了__gte__()方法，则称为非数据描述符，比如__getattribute__()
    
    
    
@@ -64,7 +64,7 @@
    经典类
    新式类，所有的类都继承自父类，或者叫基类，即继承了object类（object）
    
-   mro()方法
+   .mro()方法
    有向无环路图
    ~~~
 
