@@ -4,7 +4,7 @@
 
    * 企业级MySQL部署在Linux操作系统上
 
-   * mysql企业版、mysql社区办、MariaDB
+   * mysql企业版、mysql社区版、MariaDB
 
    * dev.mysql.com
 
@@ -153,6 +153,8 @@ D	持久性(Durability)
 可串行化：事务进行串行化，但是牺牲了并发性能
 
 mysql：可重复读
+
+oracle：读已提交
 
 ~~~ mysql
 show variables like 'autocommit';
